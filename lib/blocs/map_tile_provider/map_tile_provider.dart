@@ -31,7 +31,7 @@ class OSMDefaultMapTile extends MapTileProvider {
   @override
   WidgetBuilder get imageBuilder => (context) => Image.asset(
         "assets/images/OpenMapTiles.png",
-        package: "trufi_core",
+        package: "trufi",
         // TODO add image
         fit: BoxFit.cover,
       );
@@ -67,7 +67,7 @@ class OSMMapLayer extends MapTileProvider {
   WidgetBuilder get imageBuilder => (context) => Image.asset(
         "assets/images/OpenMapTiles.png",
         fit: BoxFit.cover,
-        package: 'trufi_core',
+        package: 'trufi',
         // TODO add image
       );
 

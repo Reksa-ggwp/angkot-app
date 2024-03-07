@@ -46,7 +46,7 @@ class AboutPage extends StatelessWidget {
                 height: 300,
                 child: Image.asset(
                   'assets/images/trufi-logo.png',
-                  package: 'trufi_core',
+                  package: 'trufi',
                   // TODO add image
                   fit: BoxFit.contain,
                   color: Colors.white.withOpacity(0.07),
@@ -176,7 +176,7 @@ class AboutPage extends StatelessWidget {
                                 Expanded(
                                   child: Image.asset(
                                     'assets/images/trufi-logo.png',
-                                    package: 'trufi_core',
+                                    package: 'trufi',
                                     // TODO add image
                                     fit: BoxFit.contain,
                                   ),
