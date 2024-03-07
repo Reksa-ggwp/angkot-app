@@ -7,9 +7,9 @@ import 'package:trufi/local_poi_layer/poi_marker_enum.dart';
 import 'package:trufi/local_poi_layer/poi_marker_modal.dart';
 import 'package:trufi/local_poi_layer/markers_from_assets.dart';
 import 'package:trufi/translations/trufi_app_localizations.dart';
-import 'package:trufi_core/base/blocs/map_layer/map_layer.dart';
-import 'package:trufi_core/base/blocs/panel/panel_cubit.dart';
-import 'package:trufi_core/base/models/trufi_latlng.dart';
+import 'package:trufi/blocs/map_layer/map_layer.dart';
+import 'package:trufi/blocs/panel/panel_cubit.dart';
+import 'package:trufi/models/trufi_latlng.dart';
 
 import 'poi_layer_data.dart';
 

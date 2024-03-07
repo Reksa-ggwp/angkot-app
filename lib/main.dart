@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:trufi/custom_async_executor.dart';
 import 'package:trufi/local_poi_layer/static_layer.dart';
-import 'package:trufi_core/base/blocs/map_configuration/map_configuration_cubit.dart';
-import 'package:trufi_core/base/blocs/map_tile_provider/map_tile_provider.dart';
-import 'package:trufi_core/base/models/trufi_latlng.dart';
-import 'package:trufi_core/base/utils/certificates_letsencrypt_android.dart';
-import 'package:trufi_core/base/utils/graphql_client/hive_init.dart';
-import 'package:trufi_core/base/utils/trufi_app_id.dart';
-import 'package:trufi_core/base/widgets/drawer/menu/social_media_item.dart';
-import 'package:trufi_core/base/widgets/screen/lifecycle_reactor_notification.dart';
-import 'package:trufi_core/trufi_core.dart';
-import 'package:trufi_core/trufi_router.dart';
+import 'package:trufi/blocs/map_configuration/map_configuration_cubit.dart';
+import 'package:trufi/blocs/map_tile_provider/map_tile_provider.dart';
+import 'package:trufi/models/trufi_latlng.dart';
+import 'package:trufi/utils/certificates_letsencrypt_android.dart';
+import 'package:trufi/utils/graphql_client/hive_init.dart';
+import 'package:trufi/utils/trufi_app_id.dart';
+import 'package:trufi/widgets/drawer/menu/social_media_item.dart';
+import 'package:trufi/widgets/screen/lifecycle_reactor_notification.dart';
+import 'package:trufi/trufi_core.dart';
+import 'package:trufi/trufi_router.dart';
 
 import 'default_values.dart';
 

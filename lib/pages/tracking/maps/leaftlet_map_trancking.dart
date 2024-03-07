@@ -1,10 +1,11 @@
+/*
 import 'package:flutter/material.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:trufi_core/base/widgets/base_maps/leaflet_maps/leaflet_map.dart';
-import 'package:trufi_core/base/widgets/base_maps/leaflet_maps/leaflet_map_controller.dart';
+import 'package:trufi/widgets/base_maps/leaflet_maps/leaflet_map.dart';
+import 'package:trufi/widgets/base_maps/leaflet_maps/leaflet_map_controller.dart';
 
 import 'package:pf_user_tracking/bloc/tracking/tracking_cubit.dart';
 
@@ -97,3 +98,4 @@ class LeaftletMapTracking extends StatelessWidget {
     ];
   }
 }
+*/

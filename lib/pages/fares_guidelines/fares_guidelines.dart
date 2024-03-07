@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'package:trufi/translations/trufi_app_localizations.dart';
-import 'package:trufi_core/base/utils/util_icons/custom_icons.dart';
-import 'package:trufi_core/base/widgets/basic_widgets/trufi_expansion_tile.dart';
-import 'package:trufi_core/base/widgets/drawer/menu/default_pages_menu.dart';
+import 'package:trufi/utils/util_icons/custom_icons.dart';
+import 'package:trufi/widgets/basic_widgets/trufi_expansion_tile.dart';
+import 'package:trufi/widgets/drawer/menu/default_pages_menu.dart';
 
 class FaresGuideLinesPage extends StatelessWidget {
   static const String route = "/FaresGuideLines";

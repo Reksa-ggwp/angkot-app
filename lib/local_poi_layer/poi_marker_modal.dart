@@ -3,9 +3,9 @@ import 'package:latlong2/latlong.dart';
 import 'package:trufi/local_poi_layer/poi_marker_enum.dart';
 import 'package:trufi/local_poi_layer/poi_layer_data.dart';
 import 'package:trufi/translations/trufi_app_localizations.dart';
-import 'package:trufi_core/base/models/trufi_latlng.dart';
-import 'package:trufi_core/base/models/trufi_place.dart';
-import 'package:trufi_core/base/pages/home/widgets/trufi_map_route/custom_location_selector.dart';
+import 'package:trufi/models/trufi_latlng.dart';
+import 'package:trufi/models/trufi_place.dart';
+import 'package:trufi/pages/home/widgets/trufi_map_route/custom_location_selector.dart';
 
 class POIMarkerModal extends StatelessWidget {
   final POILayerData element;

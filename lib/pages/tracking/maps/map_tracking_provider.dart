@@ -1,7 +1,8 @@
+/*
 import 'package:flutter/material.dart';
 import 'package:trufi/pages/tracking/maps/leaftlet_map_trancking.dart';
-import 'package:trufi_core/base/models/map_provider_collection/i_trufi_map_controller.dart';
-import 'package:trufi_core/base/widgets/base_maps/leaflet_maps/leaflet_map_controller.dart';
+import 'package:trufi/models/map_provider_collection/i_trufi_map_controller.dart';
+import 'package:trufi/widgets/base_maps/leaflet_maps/leaflet_map_controller.dart';
 
 typedef MapTrackingBuilder = Widget Function(
   BuildContext context,
@@ -35,3 +36,4 @@ class LeafletMapTrackingProvider implements MapTrackingProvider {
     );
   }
 }
+*/

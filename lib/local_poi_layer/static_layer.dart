@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:trufi/local_poi_layer/poi_marker_enum.dart';
 import 'package:trufi/local_poi_layer/poi_layer.dart';
 import 'package:trufi/translations/trufi_app_localizations.dart';
-import 'package:trufi_core/base/blocs/map_layer/map_layer.dart';
+import 'package:trufi/blocs/map_layer/map_layer.dart';
 
 final List<MapLayerContainer> customLayersTrufi = [
   MapLayerContainer(

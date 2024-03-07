@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:trufi_core/base/utils/util_icons/custom_icons.dart';
+import 'package:trufi/utils/util_icons/custom_icons.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:trufi_core/base/pages/feedback/translations/feedback_localizations.dart';
+import 'package:trufi/pages/feedback/translations/feedback_localizations.dart';
 
 class FeedbackPage extends StatelessWidget {
   static const String route = "/Feedback";

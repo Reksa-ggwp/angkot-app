@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:async_executor/async_executor.dart';
 import 'package:flare_flutter/flare_actor.dart';
-import 'package:trufi_core/base/widgets/alerts/fetch_error_handler.dart';
+import 'package:trufi/widgets/alerts/fetch_error_handler.dart';
 
-import 'package:trufi_core/base/widgets/screen/screen_helpers.dart';
+import 'package:trufi/widgets/screen/screen_helpers.dart';
 
 AsyncExecutor customAsyncExecutor = AsyncExecutor(
   loadingMessage: (

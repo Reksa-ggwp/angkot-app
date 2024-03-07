@@ -3,10 +3,10 @@
 // import 'package:pf_user_tracking/bloc/tracking/tracking_cubit.dart';
 // import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-// import 'package:trufi_core/base/models/trufi_latlng.dart';
-// import 'package:trufi_core/base/widgets/base_maps/google_maps/google_map.dart';
-// import 'package:trufi_core/base/widgets/base_maps/google_maps/google_map_controller.dart';
-// import 'package:trufi_core/base/widgets/base_maps/google_maps/widget_marker/marker_generator.dart';
+// import 'package:trufi/models/trufi_latlng.dart';
+// import 'package:trufi/widgets/base_maps/google_maps/google_map.dart';
+// import 'package:trufi/widgets/base_maps/google_maps/google_map_controller.dart';
+// import 'package:trufi/widgets/base_maps/google_maps/widget_marker/marker_generator.dart';
 
 // class GoogleMapTracking extends StatelessWidget {
 //   final TGoogleMapController trufiMapController;
