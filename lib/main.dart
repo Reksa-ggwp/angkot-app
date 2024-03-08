@@ -21,24 +21,23 @@ void main() async {
   await TrufiAppId.initialize();
   runApp(
     TrufiApp(
-      appNameTitle: 'TrufiApp',
+      appNameTitle: 'ReksaUSU',
       trufiLocalization: DefaultValues.trufiLocalization(
         currentLocale: const Locale("es"),
       ),
       blocProviders: [
         ...DefaultValues.blocProviders(
-          otpEndpoint: "https://navigator.trufi.app/otp",
-          otpGraphqlEndpoint: "https://navigator.trufi.app/otp/index/graphql",
+          otpEndpoint: "https://medan.trufi.dev/otp",
+          otpGraphqlEndpoint: "https://medan.trufi.dev/otp/index/graphql",
           mapConfiguration: MapConfiguration(
-            center: const TrufiLatLng(-17.392600, -66.158787),
-            feedbackForm: "https://forms.gle/QMLhJT7N44Bh9zBN6",
+            center: const TrufiLatLng(3.594582, 98.672618),
           ),
           searchAssetPath: "assets/data/search.json",
-          photonUrl: "https://navigator.trufi.app/photon",
+          photonUrl: "https://medan.trufi.dev/photon",
           mapTileProviders: [
             OSMMapLayer(
               mapTilesUrl:
-                  "http://navigator.trufi.app/static-maps/trufi-liberty/{z}/{x}/{y}@2x.jpg",
+                  "https://medan.trufi.dev/static-maps/trufi-liberty/{z}/{x}/{y}@2x.jpg",
             ),
           ],
           layersContainer: customLayersTrufi,
@@ -46,9 +45,9 @@ void main() async {
       ],
       trufiRouter: TrufiRouter(
         routerDelegate: DefaultValues.routerDelegate(
-          appName: 'Trufi App',
-          cityName: 'Cochabamba',
-          countryName: 'Bolivia',
+          appName: 'ReksaIlkom',
+          cityName: 'Medan',
+          countryName: 'Indonesia',
           backgroundImageBuilder: (_) {
             return Image.asset(
               'assets/images/drawer-bg.jpg',
@@ -65,11 +64,11 @@ void main() async {
           asyncExecutor: customAsyncExecutor,
           shareBaseUri: Uri(
             scheme: "https",
-            host: "navigator.trufi.app",
+            host: "medan.trufi.dev",
           ),
           lifecycleReactorHandler: LifecycleReactorNotifications(
             url:
-                'https://navigator.trufi.app/static_files/notification.json',
+                'https://medan.trufi.dev/static_files/notification.json',
           ),
         ),
       ),
