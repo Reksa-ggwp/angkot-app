@@ -21,10 +21,7 @@ void main() async {
   await TrufiAppId.initialize();
   runApp(
     TrufiApp(
-      appNameTitle: 'ReksaUSU',
-      trufiLocalization: DefaultValues.trufiLocalization(
-        currentLocale: const Locale("es"),
-      ),
+      appNameTitle: 'Angkot',
       blocProviders: [
         ...DefaultValues.blocProviders(
           otpEndpoint: "https://medan.trufi.dev/otp",
@@ -32,20 +29,13 @@ void main() async {
           mapConfiguration: MapConfiguration(
             center: const TrufiLatLng(3.594582, 98.672618),
           ),
-          searchAssetPath: "assets/data/search.json",
+          searchAssetPath: " ",
           photonUrl: "https://medan.trufi.dev/photon",
-          mapTileProviders: [
-            OSMMapLayer(
-              mapTilesUrl:
-                  "https://medan.trufi.dev/static-maps/trufi-liberty/{z}/{x}/{y}@2x.jpg",
-            ),
-          ],
-          layersContainer: customLayersTrufi,
         ),
       ],
       trufiRouter: TrufiRouter(
         routerDelegate: DefaultValues.routerDelegate(
-          appName: 'ReksaIlkom',
+          appName: 'Angkot',
           cityName: 'Medan',
           countryName: 'Indonesia',
           backgroundImageBuilder: (_) {
