@@ -5,10 +5,9 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
-import 'trufi_app_localizations_de.dart';
 import 'trufi_app_localizations_en.dart';
-import 'trufi_app_localizations_es.dart';
-import 'trufi_app_localizations_pt.dart';
+import 'trufi_app_localizations_id.dart';
+
 
 /// Callers can lookup localized strings with an instance of TrufiAppLocalization
 /// returned by `TrufiAppLocalization.of(context)`.
@@ -91,10 +90,8 @@ abstract class TrufiAppLocalization {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
-    Locale('de'),
     Locale('en'),
-    Locale('es'),
-    Locale('pt')
+    Locale('id')
   ];
 
   /// No description provided for @menuFaresGuidelines.
@@ -365,7 +362,7 @@ class _TrufiAppLocalizationDelegate extends LocalizationsDelegate<TrufiAppLocali
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['de', 'en', 'es', 'pt'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['en', 'id'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_TrufiAppLocalizationDelegate old) => false;
@@ -376,10 +373,8 @@ TrufiAppLocalization lookupTrufiAppLocalization(Locale locale) {
 
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'de': return TrufiAppLocalizationDe();
     case 'en': return TrufiAppLocalizationEn();
-    case 'es': return TrufiAppLocalizationEs();
-    case 'pt': return TrufiAppLocalizationPt();
+    case 'id': return TrufiAppLocalizationId();
   }
 
   throw FlutterError(

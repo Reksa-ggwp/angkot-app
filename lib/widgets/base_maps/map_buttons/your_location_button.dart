@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:trufi/blocs/theme/theme_cubit.dart';
 import 'package:trufi/blocs/providers/gps_location_provider.dart';
 import 'package:trufi/models/map_provider_collection/i_trufi_map_controller.dart';
 import 'package:trufi/models/trufi_latlng.dart';
@@ -41,6 +41,7 @@ class _YourLocationButtonState extends State<YourLocationButton>
           }
         });
         return FloatingActionButton(
+          backgroundColor: ThemeCubit.isDarkMode(theme) ? Color(0xff212544) : Colors.white,
           onPressed: () async {
             if (currentLocation != null) {
               widget.setTracking(!widget.isTrackingPosition);
@@ -72,9 +73,7 @@ class _YourLocationButtonState extends State<YourLocationButton>
                   widget.isTrackingPosition
                       ? Icons.my_location
                       : Icons.location_searching,
-                  color: widget.isTrackingPosition
-                      ? theme.colorScheme.secondary
-                      : theme.iconTheme.color,
+                  color: ThemeCubit.isDarkMode(theme) ?  Colors.white : Color(0xff212544),
                 ),
         );
       },

@@ -1,8 +1,6 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:trufi/widgets/basic_widgets/trufi_expansion_tile.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import 'package:trufi/pages/about/translations/about_localizations.dart';
 import 'package:trufi/utils/packge_info_platform.dart';
 import 'package:trufi/widgets/screen/screen_helpers.dart';
@@ -45,9 +43,7 @@ class AboutPage extends StatelessWidget {
               child: SizedBox(
                 height: 300,
                 child: Image.asset(
-                  'assets/images/trufi-logo.png',
-                  package: 'trufi',
-                  // TODO add image
+                  'assets/images/angkot-logo-2.png',
                   fit: BoxFit.contain,
                   color: Colors.white.withOpacity(0.07),
                   colorBlendMode: BlendMode.modulate,
@@ -93,10 +89,70 @@ class AboutPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Text(
-                    localizationA.aboutContent(appName, cityName),
+                    localizationA.aboutContent,
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Text(
+                    //localizationA.aboutContent(appName, cityName),
+                    localizationA.aboutCredits,
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Text(
+                    //localizationA.aboutContent(appName, cityName),
+                    localizationA.aboutCredits1,
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 72),
+                  child: Image.asset(
+                    'assets/images/usu-logo.png',
+                    fit: BoxFit.contain
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Text(
+                    //localizationA.aboutContent(appName, cityName),
+                    localizationA.aboutCredits2,
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 72),
+                  child: Image.asset(
+                      'assets/images/dishub-logo.png',
+                      fit: BoxFit.contain
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Text(
+                    //localizationA.aboutContent(appName, cityName),
+                    localizationA.aboutCredits3,
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 72),
+                  child: Image.asset(
+                      'assets/images/trufi-logo.png',
+                      fit: BoxFit.contain
                   ),
                 ),
                 const SizedBox(height: 24),
+                /*
                 TrufiExpansionTile(
                   title: localizationA.aboutCollapseTitle,
                   typeTitle: ExpansionTileTitleType.secondary,
@@ -154,6 +210,7 @@ class AboutPage extends StatelessWidget {
                     ),
                   ),
                 ),
+                */
                 const SizedBox(height: 30),
                 Column(
                   children: [
@@ -175,9 +232,7 @@ class AboutPage extends StatelessWidget {
                               children: [
                                 Expanded(
                                   child: Image.asset(
-                                    'assets/images/trufi-logo.png',
-                                    package: 'trufi',
-                                    // TODO add image
+                                    'assets/images/angkot-logo-2.png',
                                     fit: BoxFit.contain,
                                   ),
                                 ),
@@ -206,6 +261,7 @@ class AboutPage extends StatelessWidget {
                     launch(url);
                   },
                 ),
+                /*
                 const SizedBox(height: 20),
                 RichText(
                   text: TextSpan(
@@ -233,6 +289,7 @@ class AboutPage extends StatelessWidget {
                     ],
                   ),
                 ),
+                */
               ],
             ),
           ],

@@ -32,9 +32,7 @@ class HomeAppBar extends StatelessWidget {
     final theme = Theme.of(context);
     return Card(
       margin: EdgeInsets.zero,
-      color: ThemeCubit.isDarkMode(theme)
-          ? theme.appBarTheme.backgroundColor
-          : theme.colorScheme.primary,
+      color: Color(0xff212544),
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(
           bottom: Radius.circular(4),

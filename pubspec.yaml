@@ -102,6 +102,26 @@ flutter:
     - assets/data/POIs/
     - assets/images/
 
+  fonts:
+    - family: Harabara
+      fonts:
+        - asset: assets/fonts/Harabara.ttf
+    - family: Opensans
+      fonts:
+        - asset: assets/fonts/OpenSans-Regular.ttf
+        - asset: assets/fonts/OpenSans-Italic.ttf
+          style: italic
+    - family: Opensans-semibold
+      fonts:
+        - asset: assets/fonts/OpenSans-Semibold.ttf
+        - asset: assets/fonts/OpenSans-SemiboldItalic.ttf
+          style: italic
+    - family: Opensans-bold
+      fonts:
+        - asset: assets/fonts/OpenSans-Bold.ttf
+        - asset: assets/fonts/OpenSans-BoldItalic.ttf
+          style: italic
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

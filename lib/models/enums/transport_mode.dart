@@ -44,14 +44,14 @@ TransportMode getTransportMode({
     value = enumType.contains(TransportMode.trufi.name)
         ? TransportMode.trufi
         : enumType.contains(TransportMode.micro.name)
-            ? TransportMode.micro
-            : enumType.contains(TransportMode.miniBus.name)
-                ? TransportMode.miniBus
-                : enumType.contains(TransportMode.gondola.name)
-                    ? TransportMode.gondola
-                    : enumType.contains(TransportMode.lightRail.name)
-                        ? TransportMode.lightRail
-                        : _getTransportModeByMode(mode);
+        ? TransportMode.micro
+        : enumType.contains(TransportMode.miniBus.name)
+        ? TransportMode.miniBus
+        : enumType.contains(TransportMode.gondola.name)
+        ? TransportMode.gondola
+        : enumType.contains(TransportMode.lightRail.name)
+        ? TransportMode.lightRail
+        : _getTransportModeByMode(mode);
   } else {
     value = _getTransportModeByMode(mode);
   }
@@ -60,7 +60,7 @@ TransportMode getTransportMode({
 
 TransportMode _getTransportModeByMode(String mode) {
   return TransportModeExtension.names.keys.firstWhere(
-    (key) => key.name == mode,
+        (key) => key.name == mode,
     orElse: () => TransportMode.walk,
   );
 }
@@ -94,7 +94,7 @@ extension TransportModeExtension on TransportMode {
   static const _icons = <TransportMode, IconData?>{
     TransportMode.airplane: Icons.airplanemode_active,
     TransportMode.bicycle: Icons.directions_bike,
-    TransportMode.bus: Icons.directions_bus,
+    TransportMode.bus: Icons.airport_shuttle,
     TransportMode.cableCar: null,
     TransportMode.car: Icons.drive_eta,
     TransportMode.carPool: Icons.drive_eta,
@@ -122,7 +122,8 @@ extension TransportModeExtension on TransportMode {
       case TransportMode.bicycle:
         return bikeIcon(color: color ?? const Color(0xff666666));
       case TransportMode.bus:
-        return busIcon(color: color ?? const Color(0xffff260c));
+        return null;
+          //busIcon(color: color ?? const Color(0xffff260c));
       case TransportMode.cableCar:
         return gondolaIcon(color: color ?? const Color(0xff000000));
       case TransportMode.car:
@@ -149,7 +150,7 @@ extension TransportModeExtension on TransportMode {
         return null;
       case TransportMode.walk:
         return walkIcon(color: color ?? const Color(0xff000000));
-      // route icons for specific types of transportation
+    // route icons for specific types of transportation
       case TransportMode.trufi:
         return null;
       case TransportMode.micro:
@@ -262,13 +263,13 @@ extension TransportModeExtension on TransportMode {
         child: _images(this, color) ??
             (_icons[this] != null
                 ? Icon(
-                    _icons[this],
-                    color: color ?? color,
-                  )
+              _icons[this],
+              color: color ?? color,
+            )
                 : const Icon(
-                    Icons.error,
-                    color: Colors.red,
-                  )),
+              Icons.error,
+              color: Colors.red,
+            )),
       ),
     );
   }

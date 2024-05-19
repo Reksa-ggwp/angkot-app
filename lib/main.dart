@@ -44,12 +44,12 @@ void main() async {
               fit: BoxFit.cover,
             );
           },
-          urlWhatsapp: 'https://wa.me/message/SXGYZP66KWYSO1',
-          emailContact: 'feedback@trufi.app',
-          urlShareApp: 'https://www.trufi.app/',
+          urlWhatsapp: 'https://example',
+          emailContact: 'feedback@example.app',
+          urlShareApp: 'https://www.example.app/',
           urlSocialMedia: const UrlSocialMedia(
-            urlFacebook: 'https://www.facebook.com/trufiapp/',
-            urlInstagram: 'https://www.instagram.com/trufi.app',
+            urlFacebook: 'https://www.facebook.com/example/',
+            urlInstagram: 'https://www.instagram.com/reks.hehe',
           ),
           asyncExecutor: customAsyncExecutor,
           shareBaseUri: Uri(

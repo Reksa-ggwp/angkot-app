@@ -5,12 +5,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
-import 'trufi_base_localizations_de.dart';
 import 'trufi_base_localizations_en.dart';
-import 'trufi_base_localizations_es.dart';
-import 'trufi_base_localizations_fr.dart';
-import 'trufi_base_localizations_it.dart';
-import 'trufi_base_localizations_pt.dart';
+import 'trufi_base_localizations_id.dart';
 
 /// Callers can lookup localized strings with an instance of TrufiBaseLocalization
 /// returned by `TrufiBaseLocalization.of(context)`.
@@ -93,12 +89,8 @@ abstract class TrufiBaseLocalization {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
-    Locale('de'),
     Locale('en'),
-    Locale('es'),
-    Locale('fr'),
-    Locale('it'),
-    Locale('pt')
+    Locale('id')
   ];
 
   /// Text of dialog that explains that access to location services was denied
@@ -615,7 +607,7 @@ class _TrufiBaseLocalizationDelegate extends LocalizationsDelegate<TrufiBaseLoca
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['de', 'en', 'es', 'fr', 'it', 'pt'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['en','id'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_TrufiBaseLocalizationDelegate old) => false;
@@ -626,12 +618,8 @@ TrufiBaseLocalization lookupTrufiBaseLocalization(Locale locale) {
 
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'de': return TrufiBaseLocalizationDe();
     case 'en': return TrufiBaseLocalizationEn();
-    case 'es': return TrufiBaseLocalizationEs();
-    case 'fr': return TrufiBaseLocalizationFr();
-    case 'it': return TrufiBaseLocalizationIt();
-    case 'pt': return TrufiBaseLocalizationPt();
+    case 'id': return TrufiBaseLocalizationId();
   }
 
   throw FlutterError(

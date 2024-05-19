@@ -165,12 +165,14 @@ class _LeafletMapState extends State<LeafletMap> {
             );
           },
         ),
+        /*
         if (widget.showPOILayers)
           const Positioned(
             top: 16.0,
             right: 16.0,
             child: MapTypeButton(),
           ),
+        */
         Positioned(
           bottom: widget.bottomPaddingButtons ?? 25.0,
           right: 16.0,

@@ -21,10 +21,12 @@ abstract class TrufiMenuItem {
   Widget buildItem(BuildContext context, {bool isSelected = false}) {
     final theme = Theme.of(context);
     final backgroundColor =
-        ThemeCubit.isDarkMode(theme) ? Colors.grey[900] : Colors.grey[400];
+        ThemeCubit.isDarkMode(theme) ? Color(0xff1b1e37) : Color(0xffD3D5D5);
+
     return Container(
-      color: isSelected ? backgroundColor : null,
+      color: isSelected ?  backgroundColor : ThemeCubit.isDarkMode(theme) ? Color(0xff212544) : Color(0xffBEC0C0),
       child: ListTile(
+        iconColor: ThemeCubit.isDarkMode(theme) ? Color(0xffBEC0C0) : Color(0xff212544),
         leading: isSelected ? selectedIcon(context) : notSelectedIcon(context),
         title: name(context),
         selected: isSelected,

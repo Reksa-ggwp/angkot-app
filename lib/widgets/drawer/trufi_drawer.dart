@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:trufi/translations/trufi_base_localizations.dart';
 import 'package:trufi/widgets/drawer/menu/trufi_menu_item.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:trufi/blocs/theme/theme_cubit.dart';
 
 class TrufiDrawer extends StatelessWidget {
   const TrufiDrawer(
@@ -30,7 +31,9 @@ class TrufiDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Drawer(
+      backgroundColor: ThemeCubit.isDarkMode(theme) ? Color(0xff212544) : Color(0xffBEC0C0),
       child: Column(
         children: [
           SizedBox(
@@ -88,6 +91,7 @@ class TrufiDrawer extends StatelessWidget {
                               ],
                             ),
                           ),
+                          /*
                           Row(
                             children: [
                               if (!kIsWeb && !Platform.isAndroid)
@@ -119,7 +123,7 @@ class TrufiDrawer extends StatelessWidget {
                                 ),
                               ),
                             ],
-                          )
+                          )*/
                         ],
                       ),
                     ],
@@ -136,7 +140,8 @@ class TrufiDrawer extends StatelessWidget {
                   [],
                   (previousValue, element) => [
                     ...previousValue,
-                    if (previousValue.isNotEmpty) const Divider(),
+                    if (previousValue.isNotEmpty)
+                      const Divider(color: Color(0xffffffff)),
                     ...element.map(
                       (element) => element.buildItem(
                         context,

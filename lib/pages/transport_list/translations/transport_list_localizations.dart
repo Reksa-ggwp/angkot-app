@@ -5,12 +5,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
-import 'transport_list_localizations_de.dart';
+import 'transport_list_localizations_id.dart';
 import 'transport_list_localizations_en.dart';
-import 'transport_list_localizations_es.dart';
-import 'transport_list_localizations_fr.dart';
-import 'transport_list_localizations_it.dart';
-import 'transport_list_localizations_pt.dart';
 
 /// Callers can lookup localized strings with an instance of TransportListLocalization
 /// returned by `TransportListLocalization.of(context)`.
@@ -93,12 +89,8 @@ abstract class TransportListLocalization {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
-    Locale('de'),
-    Locale('en'),
-    Locale('es'),
-    Locale('fr'),
-    Locale('it'),
-    Locale('pt')
+    Locale('id'),
+    Locale('en')
   ];
 
   /// No description provided for @shareRoute.
@@ -117,7 +109,7 @@ class _TransportListLocalizationDelegate extends LocalizationsDelegate<Transport
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['de', 'en', 'es', 'fr', 'it', 'pt'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['id', 'en'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_TransportListLocalizationDelegate old) => false;
@@ -128,12 +120,8 @@ TransportListLocalization lookupTransportListLocalization(Locale locale) {
 
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'de': return TransportListLocalizationDe();
+    case 'id': return TransportListLocalizationId();
     case 'en': return TransportListLocalizationEn();
-    case 'es': return TransportListLocalizationEs();
-    case 'fr': return TransportListLocalizationFr();
-    case 'it': return TransportListLocalizationIt();
-    case 'pt': return TransportListLocalizationPt();
   }
 
   throw FlutterError(

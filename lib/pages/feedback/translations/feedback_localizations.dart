@@ -5,12 +5,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
-import 'feedback_localizations_de.dart';
+import 'feedback_localizations_id.dart';
 import 'feedback_localizations_en.dart';
-import 'feedback_localizations_es.dart';
-import 'feedback_localizations_fr.dart';
-import 'feedback_localizations_it.dart';
-import 'feedback_localizations_pt.dart';
 
 /// Callers can lookup localized strings with an instance of FeedbackLocalization
 /// returned by `FeedbackLocalization.of(context)`.
@@ -93,12 +89,8 @@ abstract class FeedbackLocalization {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
-    Locale('de'),
-    Locale('en'),
-    Locale('es'),
-    Locale('fr'),
-    Locale('it'),
-    Locale('pt')
+    Locale('id'),
+    Locale('en')
   ];
 
   /// Menu item that shows the feedback page
@@ -129,7 +121,7 @@ class _FeedbackLocalizationDelegate extends LocalizationsDelegate<FeedbackLocali
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['de', 'en', 'es', 'fr', 'it', 'pt'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['id', 'en'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_FeedbackLocalizationDelegate old) => false;
@@ -140,12 +132,8 @@ FeedbackLocalization lookupFeedbackLocalization(Locale locale) {
 
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'de': return FeedbackLocalizationDe();
+    case 'id': return FeedbackLocalizationId();
     case 'en': return FeedbackLocalizationEn();
-    case 'es': return FeedbackLocalizationEs();
-    case 'fr': return FeedbackLocalizationFr();
-    case 'it': return FeedbackLocalizationIt();
-    case 'pt': return FeedbackLocalizationPt();
   }
 
   throw FlutterError(

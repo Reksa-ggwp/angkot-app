@@ -33,10 +33,11 @@ class ShareItineraryButton extends StatelessWidget {
           },
         ).toString());
       },
-      heroTag: null,
+      heroTag: null
+        /*,
       child: const Icon(
         Icons.share,
-      ),
+      ),*/
     );
   }
 }

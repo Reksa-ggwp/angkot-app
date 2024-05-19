@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 //import 'package:pf_user_tracking/tools/location.dart';
 import 'package:routemaster/routemaster.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:trufi/pages/fares_guidelines/fares_guidelines.dart';
+//import 'package:trufi/pages/fares_guidelines/fares_guidelines.dart';
 
 import 'package:trufi/pages/feedback.dart';
 //import 'package:trufi/pages/tracking/maps/map_tracking_provider.dart';
@@ -56,10 +56,8 @@ abstract class DefaultValues {
           TrufiAppLocalization.delegate,
         ],
         supportedLocales: const [
-          Locale('es'),
           Locale('en'),
-          Locale('de'),
-          Locale('pt'),
+          Locale('id')
         ],
       );
 
@@ -214,11 +212,13 @@ abstract class DefaultValues {
                     drawerBuilder: generateDrawer(FeedbackPage.route),
                   ),
                 ),
+            /*    
             FaresGuideLinesPage.route: (route) => NoAnimationPage(
                   child: FaresGuideLinesPage(
                     drawerBuilder: generateDrawer(FaresGuideLinesPage.route),
                   ),
                 ),
+            */    
             AboutPage.route: (route) => NoAnimationPage(
                   child: AboutPage(
                     appName: appName,
@@ -245,7 +245,7 @@ List<List<TrufiMenuItem>> defaultMenuItems({
       //TrackingScreen.menuPage,
       DefaultPagesMenu.savedPlaces.toMenuPage(),
       DefaultPagesMenu.feedback.toMenuPage(),
-      FaresGuideLinesPage.menuPage,
+      //FaresGuideLinesPage.menuPage,
       DefaultPagesMenu.about.toMenuPage(),
     ],
     [

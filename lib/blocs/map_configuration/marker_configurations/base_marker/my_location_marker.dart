@@ -13,20 +13,20 @@ class MyLocationMarker extends StatelessWidget {
         scale: 0.5,
         child: Container(
           decoration: BoxDecoration(
-            color: theme.colorScheme.primary,
+            color: Color(0xff212544),
             border: Border.all(color: Colors.white, width: 3.5),
             shape: BoxShape.circle,
             boxShadow: [
               BoxShadow(
-                color: theme.colorScheme.primary,
+                color: Color(0xff212544),
                 spreadRadius: 8.0,
                 blurRadius: 30.0,
               ),
             ],
           ),
-          child: Icon(
+          child: const Icon(
             Icons.circle_outlined,
-            color: theme.colorScheme.primary,
+            color: Color(0xff212544),
           ),
         ),
       ),

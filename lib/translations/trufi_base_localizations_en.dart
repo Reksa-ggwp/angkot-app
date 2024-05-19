@@ -83,7 +83,7 @@ class TrufiBaseLocalizationEn extends TrufiBaseLocalization {
   String get commonUnknownError => 'Unknown error';
 
   @override
-  String get commonUnkownPlace => 'Unkown place';
+  String get commonUnkownPlace => 'Unknown place';
 
   @override
   String get commonWait => 'Wait';

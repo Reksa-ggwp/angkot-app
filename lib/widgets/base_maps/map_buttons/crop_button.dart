@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trufi/blocs/theme/theme_cubit.dart';
 
 class CropButton extends StatefulWidget {
   const CropButton({
@@ -40,13 +41,16 @@ class CropButtonState extends State<CropButton>
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return ScaleTransition(
       scale: _animation,
       child: FloatingActionButton(
+        backgroundColor: ThemeCubit.isDarkMode(theme) ? Color(0xff212544) : Colors.white,
         onPressed: _handleOnPressed,
         heroTag: null,
-        child: const Icon(
+        child:  Icon(
           Icons.crop_free,
+          color: ThemeCubit.isDarkMode(theme) ? Colors.white : Color(0xff212544),
         ),
       ),
     );

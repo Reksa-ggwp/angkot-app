@@ -124,13 +124,16 @@ class _LeafletMapRouteState extends State<LeafletMapRoute>
                     CropButton(
                       key: _cropButtonKey,
                       onPressed: _handleOnCropPressed,
-                    ),
+                    )
+                    /*
+                    ,
                     const Padding(padding: EdgeInsets.all(4.0)),
                     if (routePlannerState.isPlanCorrect &&
                         widget.shareBaseItineraryUri != null)
                       ShareItineraryButton(
                         shareBaseItineraryUri: widget.shareBaseItineraryUri!,
                       ),
+                    */
                   ],
                 ),
               );

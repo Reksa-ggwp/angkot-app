@@ -3,7 +3,9 @@
     <item android:drawable="@color/colorSplashBackground"/>
     <item>
         <bitmap
-            android:gravity="center|fill"
-            android:src="@mipmap/splash"/>
+
+            android:gravity="center"
+            android:src="@mipmap/splash"
+            android:scaleType="centerCrop"/>
     </item>
 </layer-list>

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trufi/blocs/theme/default_theme.dart';
 
 class FromMarker extends StatelessWidget {
   final double height;
@@ -27,7 +28,7 @@ class FromMarker extends StatelessWidget {
               width: 5.2,
               height: 5.2,
               decoration: BoxDecoration(
-                color: theme.colorScheme.secondary,
+                color: Color(0xffF65D53),
                 shape: BoxShape.circle,
               ),
             ),

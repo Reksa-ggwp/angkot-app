@@ -118,6 +118,7 @@ class _ChooseLocationPageState extends State<ChooseLocationPage>
     // final trufiConfiguration = context.read<ConfigurationCubit>().state;
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xff212544),
         iconTheme: const IconThemeData(color: Colors.white),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -179,7 +180,7 @@ class _ChooseLocationPageState extends State<ChooseLocationPage>
             ),
           ),
           Container(
-            color: theme.cardColor,
+            color: theme.brightness == Brightness.dark ? Color(0xff212544) : null,
             padding: const EdgeInsets.all(10),
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -237,13 +238,14 @@ class _ChooseLocationPageState extends State<ChooseLocationPage>
                           child: Text(
                             localization.commonConfirmLocation,
                             style: TextStyle(
-                                color: locationData != null
-                                    ? theme.colorScheme.secondary
-                                    : Colors.grey),
+                                color: theme.brightness == Brightness.dark ? Colors.white : Color(0xff212544)),
                             textAlign: TextAlign.center,
                             maxLines: 1,
                           ),
                         ),
+                          style: OutlinedButton.styleFrom(
+                            side: BorderSide(width: 2.0, color: Colors.white),
+                          )
                       ),
                   ],
                 ),

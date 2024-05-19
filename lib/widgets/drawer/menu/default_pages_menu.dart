@@ -58,9 +58,11 @@ extension LayerIdsToString on DefaultPagesMenu {
               ? Colors.white
               : Colors.black,
         ),
-        notSelectedIcon: (context) => const Icon(
+        notSelectedIcon: (context) => Icon(
           Icons.linear_scale,
-          color: Colors.grey,
+          color: Theme.of(context).brightness == Brightness.dark
+              ? Colors.grey[200]
+              : Colors.grey[900],
         ),
         name: (context) {
           return TrufiBaseLocalization.of(context).menuConnections;
@@ -74,9 +76,11 @@ extension LayerIdsToString on DefaultPagesMenu {
               ? Colors.white
               : Colors.black,
         ),
-        notSelectedIcon: (context) => const Icon(
+        notSelectedIcon: (context) => Icon(
           Icons.room,
-          color: Colors.grey,
+          color: Theme.of(context).brightness == Brightness.dark
+              ? Colors.grey[200]
+              : Colors.grey[900],
         ),
         name: (context) {
           return SavedPlacesLocalization.of(context).menuYourPlaces;
@@ -90,9 +94,11 @@ extension LayerIdsToString on DefaultPagesMenu {
               ? Colors.white
               : Colors.black,
         ),
-        notSelectedIcon: (context) => const Icon(
+        notSelectedIcon: (context) => Icon(
           Icons.feedback,
-          color: Colors.grey,
+          color: Theme.of(context).brightness == Brightness.dark
+              ? Colors.grey[200]
+              : Colors.grey[900],
         ),
         name: (context) {
           return FeedbackLocalization.of(context).menuFeedback;
@@ -106,9 +112,11 @@ extension LayerIdsToString on DefaultPagesMenu {
               ? Colors.white
               : Colors.black,
         ),
-        notSelectedIcon: (context) => const Icon(
+        notSelectedIcon: (context) => Icon(
           Icons.list,
-          color: Colors.grey,
+          color: Theme.of(context).brightness == Brightness.dark
+              ? Colors.grey[200]
+              : Colors.grey[900],
         ),
         name: (context) {
           return TrufiBaseLocalization.of(context).menuTransportList;
@@ -122,9 +130,11 @@ extension LayerIdsToString on DefaultPagesMenu {
               ? Colors.white
               : Colors.black,
         ),
-        notSelectedIcon: (context) => const Icon(
+        notSelectedIcon: (context) => Icon(
           Icons.info,
-          color: Colors.grey,
+          color: Theme.of(context).brightness == Brightness.dark
+              ? Colors.grey[200]
+              : Colors.grey[900],
         ),
         name: (context) {
           return AboutLocalization.of(context).menuAbout;

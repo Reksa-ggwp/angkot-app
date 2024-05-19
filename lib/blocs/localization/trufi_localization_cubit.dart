@@ -8,18 +8,10 @@ part 'trufi_localization_state.dart';
 class TrufiLocalizationCubit extends Cubit<TrufiLocalization> {
   static String localeDisplayName(Locale locale) {
     switch (locale.languageCode.toLowerCase()) {
-      case 'de':
-        return 'Deutsch';
+      case 'id':
+        return 'Bahasa Indonesia';
       case 'en':
         return 'English';
-      case 'es':
-        return 'Español';
-      case 'fr':
-        return 'Français';
-      case 'it':
-        return 'Italiano';
-      case 'pt':
-        return 'Portuguese';
       default:
         return 'English';
     }

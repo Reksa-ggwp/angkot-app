@@ -70,7 +70,7 @@ final themeDark = ThemeData.from(
     backgroundColor: Color(0xff141515),
   ),
   appBarTheme: const AppBarTheme(
-    backgroundColor: Color(0xff161919),
+    backgroundColor: Color(0xff212544),
   ),
   progressIndicatorTheme: const ProgressIndicatorThemeData(
     color: Color(0xffd81b60),

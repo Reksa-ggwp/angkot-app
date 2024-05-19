@@ -70,10 +70,10 @@ class _LocationSearchScreenState extends State<LocationSearchScreen> {
     return Theme(
       data: theme.copyWith(
         scaffoldBackgroundColor:
-            theme.brightness == Brightness.dark ? Colors.grey[900] : null,
+            theme.brightness == Brightness.dark ? Color(0xff212544) : Colors.white,
         textSelectionTheme: theme.textSelectionTheme.copyWith(
-          cursorColor: theme.colorScheme.secondary,
-          selectionColor: theme.colorScheme.secondary.withOpacity(0.7),
+          cursorColor: Color(0xffF65D53),
+          selectionColor: Color(0xffF65D53).withOpacity(0.7),
         ),
         hintColor: Colors.grey[300],
         textTheme: theme.textTheme.copyWith(

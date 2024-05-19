@@ -5,12 +5,9 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
-import 'about_localizations_de.dart';
 import 'about_localizations_en.dart';
-import 'about_localizations_es.dart';
-import 'about_localizations_fr.dart';
-import 'about_localizations_it.dart';
-import 'about_localizations_pt.dart';
+import 'about_localizations_id.dart';
+
 
 /// Callers can lookup localized strings with an instance of AboutLocalization
 /// returned by `AboutLocalization.of(context)`.
@@ -93,12 +90,8 @@ abstract class AboutLocalization {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
-    Locale('de'),
+    Locale('id'),
     Locale('en'),
-    Locale('es'),
-    Locale('fr'),
-    Locale('it'),
-    Locale('pt')
   ];
 
   /// A short marketing sentence that describes the app
@@ -123,7 +116,11 @@ abstract class AboutLocalization {
   ///
   /// In pt, this message translates to:
   /// **'Precisa ir a algum lugar e não sabe qual trufi ou ônibus pegar?\nO aplicativo Trufi facilita isso!\nA Trufi Association é uma equipe da Bolívia e de outros países. Adoramos La Llajta e o transporte público, por isso desenvolvemos este aplicativo para facilitar o transporte. Nosso objetivo é fornecer uma ferramenta prática que lhe permita navegar com confiança.\nEstamos comprometidos com a melhoria contínua do {appName} para oferecer a você informações cada vez mais precisas e úteis. Sabemos que o sistema de transporte em {city} passa por mudanças devido a diferentes motivos, portanto, é possível que algumas rotas não estejam completamente atualizadas.\nPara tornar o {appName} uma ferramenta eficaz, contamos com a colaboração de nossos usuários. Se tiver conhecimento de alterações em algumas rotas ou paradas, recomendamos que compartilhe essas informações conosco. Sua contribuição não apenas ajudará a manter o aplicativo atualizado, mas também beneficiará outros usuários que dependem do {appName}.\nObrigado por escolher o {appName} para se locomover em {city}, esperamos que aproveite sua experiência conosco!'**
-  String aboutContent(Object appName, Object city);
+  String get aboutContent;
+  String get aboutCredits;
+  String get aboutCredits1;
+  String get aboutCredits2;
+  String get aboutCredits3;
 
   /// Button label to show licenses
   ///
@@ -177,7 +174,7 @@ class _AboutLocalizationDelegate extends LocalizationsDelegate<AboutLocalization
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['de', 'en', 'es', 'fr', 'it', 'pt'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['en', 'id'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AboutLocalizationDelegate old) => false;
@@ -188,12 +185,8 @@ AboutLocalization lookupAboutLocalization(Locale locale) {
 
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'de': return AboutLocalizationDe();
     case 'en': return AboutLocalizationEn();
-    case 'es': return AboutLocalizationEs();
-    case 'fr': return AboutLocalizationFr();
-    case 'it': return AboutLocalizationIt();
-    case 'pt': return AboutLocalizationPt();
+    case 'id': return AboutLocalizationId();
   }
 
   throw FlutterError(

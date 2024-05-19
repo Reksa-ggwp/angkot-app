@@ -24,7 +24,7 @@
     </intent>
   </queries>
   <application
-       android:label="Trufi"
+       android:label="Angkot"
        android:name="${applicationName}"
        android:icon="@mipmap/ic_launcher">
     <activity

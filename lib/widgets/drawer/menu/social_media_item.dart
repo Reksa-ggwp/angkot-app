@@ -4,6 +4,7 @@ import 'package:trufi/utils/util_icons/custom_icons.dart';
 import 'package:trufi/widgets/drawer/menu/default_item_menu.dart';
 import 'package:trufi/widgets/drawer/menu/trufi_menu_item.dart' ;
 import 'package:url_launcher/url_launcher.dart';
+import 'package:trufi/blocs/theme/theme_cubit.dart';
 
 abstract class SocialMediaItem extends TrufiMenuItem {
   final String url;
@@ -147,7 +148,8 @@ class UrlSocialMedia {
 TrufiMenuItem defaultSocialMedia(UrlSocialMedia defaultUrls) {
   return SimpleMenuItem(
       buildIcon: (context) => const Icon(Icons.share),
-      name: (context) {
+      name: (context)
+      {
         return DropdownButton<SocialMediaItem>(
           icon: Row(
             children: [

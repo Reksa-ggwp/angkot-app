@@ -62,14 +62,14 @@ Marker buildStopMarker(TrufiLatLng point) {
 }
 
 Marker buildTransportMarker(
-  TrufiLatLng point,
-  Color color,
-  Color textColor,
-  Leg leg, {
-  VoidCallback? onTap,
-  bool showIcon = true,
-  bool showText = true,
-}) {
+    TrufiLatLng point,
+    Color color,
+    Color textColor,
+    Leg leg, {
+      VoidCallback? onTap,
+      bool showIcon = true,
+      bool showText = true,
+    }) {
   return Marker(
     width: 50.0,
     point: point.toLatLng(),
@@ -115,12 +115,12 @@ Marker buildTransportMarker(
 }
 
 Marker buildMarker(
-  TrufiLatLng point,
-  IconData iconData,
-  AnchorPos anchorPos,
-  Color color, {
-  Decoration? decoration,
-}) {
+    TrufiLatLng point,
+    IconData iconData,
+    AnchorPos anchorPos,
+    Color color, {
+      Decoration? decoration,
+    }) {
   return Marker(
     point: point.toLatLng(),
     anchorPos: anchorPos,
@@ -158,17 +158,17 @@ Marker buildToMarker(TrufiLatLng point, Widget toMarker) {
 Marker buildYourLocationMarker(TrufiLatLng? point, Widget toMarker) {
   return (point != null)
       ? Marker(
-          width: 50.0,
-          height: 50.0,
-          point: point.toLatLng(),
-          anchorPos: AnchorPos.align(AnchorAlign.center),
-          builder: (context) => toMarker,
-        )
+    width: 50.0,
+    height: 50.0,
+    point: point.toLatLng(),
+    anchorPos: AnchorPos.align(AnchorAlign.center),
+    builder: (context) => toMarker,
+  )
       : Marker(
-          width: 0,
-          height: 0,
-          point: const TrufiLatLng(0, 0).toLatLng(),
-          builder: (_) => Container());
+      width: 0,
+      height: 0,
+      point: const TrufiLatLng(0, 0).toLatLng(),
+      builder: (_) => Container());
 }
 
 // @override

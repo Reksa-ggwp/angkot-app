@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:trufi/blocs/localization/trufi_localization_cubit.dart';
-import 'package:trufi/blocs/theme/theme_cubit.dart';
-import 'package:trufi/translations/trufi_base_localizations.dart';
 import 'package:trufi/widgets/drawer/menu/trufi_menu_item.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,7 +18,7 @@ class SimpleMenuItem extends TrufiMenuItem {
         );
 }
 
-enum DefaultItemsMenu { language, theme }
+enum DefaultItemsMenu { language }
 
 extension LayerIdsToString on DefaultItemsMenu {
   SimpleMenuItem toMenuItem() {
@@ -53,33 +51,7 @@ extension LayerIdsToString on DefaultItemsMenu {
               }).toList(),
             );
           }),
-      DefaultItemsMenu.theme: SimpleMenuItem(
-          buildIcon: (context) => const Icon(Icons.color_lens),
-          name: (context) {
-            return DropdownButton<ThemeMode>(
-              value: context.watch<ThemeCubit>().state.themeMode,
-              onChanged: (ThemeMode? value) {
-                context.read<ThemeCubit>().updateTheme(
-                      themeMode: value,
-                    );
-              },
-              isExpanded: true,
-              items: ThemeMode.values.map((ThemeMode value) {
-                return DropdownMenuItem<ThemeMode>(
-                  value: value,
-                  child: Text(
-                    ThemeCubit.themeModeDisplayName(
-                      TrufiBaseLocalization.of(context),
-                      value,
-                    ),
-                    style: Theme.of(context).textTheme.bodyText2,
-                    softWrap: false,
-                    maxLines: 1,
-                  ),
-                );
-              }).toList(),
-            );
-          }),
+
     };
 
     return map[this]!;

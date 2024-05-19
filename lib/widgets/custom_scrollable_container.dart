@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trufi/blocs/theme/theme_cubit.dart';
 
 class CustomScrollableContainer extends StatefulWidget {
   final Widget body;
@@ -28,6 +29,7 @@ class CustomScrollableContainerState extends State<CustomScrollableContainer> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return LayoutBuilder(builder: (builderContext, constrains) {
       const topLimit = 0.0;
       final openedPosition = constrains.maxHeight - widget.openedPosition;
@@ -69,6 +71,7 @@ class CustomScrollableContainerState extends State<CustomScrollableContainer> {
                 right: 0,
                 bottom: 0,
                 child: Card(
+                  color:ThemeCubit.isDarkMode(theme) ? Color(0xff212544) : Colors.white,
                   margin: const EdgeInsets.all(0),
                   shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
@@ -156,7 +159,7 @@ class CustomScrollableContainerState extends State<CustomScrollableContainer> {
                             ),
                           ),
                         ),
-                        const Divider(height: 1),
+                        const Divider(height: 2),
                         Expanded(
                           child: Scrollbar(
                             child: widget.panel ?? Container(),
